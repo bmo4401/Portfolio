@@ -24,6 +24,7 @@ export interface RingProps {
     children?: React.ReactNode;
   };
   isCore?: boolean;
+  link: string;
 }
 const Skill: React.FC<RingProps> = ({
   duration,

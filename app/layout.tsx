@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          'dark:bg-black text-primary dark:text-primary-dark w-screen h-screen overflow-y-auto ',
+          'dark:bg-black text-primary dark:text-primary-dark w-screen h-screen overflow-y-auto overflow-x-hidden ',
           inter.className,
         )}
       >

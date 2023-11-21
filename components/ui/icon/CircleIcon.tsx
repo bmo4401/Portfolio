@@ -28,7 +28,7 @@ const CircleIcon: React.FC<CircleIconProps> = ({ reference }) => {
           cx={75}
           cy={50}
           r={20}
-          className=" stroke-[5px] fill-white"
+          className="stroke-[5px] fill-white"
           style={{ pathLength: scrollYProgress }}
         />
         <circle

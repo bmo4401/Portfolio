@@ -52,7 +52,10 @@ const Project2 = () => {
     >
       {/* main */}
       <div
-        className=" text-primary dark:text-primary-dark w-full h-full border-2 border-yellow-500 rounded-md px-5 py-2 flex flex-col gap-3"
+        className={cn(
+          ' text-primary dark:text-primary-dark w-full h-full border-2 border-yellow-500 rounded-md px-5 py-2 flex flex-col gap-3',
+          !hidden ? 'text-primary' : ' text-primary-dark',
+        )}
         style={{ backgroundColor: !hidden ? hsla : '#000' }}
       >
         {/* Name */}

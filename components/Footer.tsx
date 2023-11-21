@@ -13,7 +13,7 @@ const Footer = () => {
           href={process.env.NEXT_PUBLIC_GITHUB}
           className="underline underline-offset-2"
         >
-          Bmo4401
+          Kyle4401
         </Link>
       </div>
       <Link

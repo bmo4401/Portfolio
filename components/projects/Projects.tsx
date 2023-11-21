@@ -24,7 +24,7 @@ const Projects = () => {
         >
           <motion.div
             style={{ scaleY: scrollYProgress }}
-            className="absolute left-[51.5%] top-1 w-[4px] h-full dark:bg-forePrimary origin-top"
+            className="absolute left-[52.3%] top-2 w-[4px] h-full dark:bg-forePrimary bg-forePrimary origin-top"
           />
           <ul className="w-full flex flex-col items-start justify-between gap-5">
             <Detail type={1} />

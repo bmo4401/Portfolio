@@ -2,10 +2,13 @@
 import LinkCustom from '@/components/projects/list/LinkCustom';
 import { Button } from '@/components/ui/Button';
 import { project1 } from '@/data/projects';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 import { cn } from '@/libs/utils';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 const Project1 = () => {
+  const { mode } = useThemeSwitcher();
+
   const [opacity, setOpacity] = useState(0);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
@@ -14,6 +17,7 @@ const Project1 = () => {
   const hsl = `hsla(272, 72%, ${lightness}, 0.5)`;
   const hsla = `hsla(272, 72%, 100%, 0.1)`;
   const { name, feature, technology } = project1;
+
   useEffect(() => {
     const overlayContainer = document.getElementById('project1Overlay');
 
@@ -53,8 +57,13 @@ const Project1 = () => {
     >
       {/* main */}
       <div
-        className=" text-primary dark:text-primary-dark w-full h-full border-2 border-project1 rounded-md px-5 py-2 flex flex-col gap-3"
-        style={{ backgroundColor: !hidden ? hsla : '#000' }}
+        className={cn(
+          '  dark:text-primary-dark w-full h-full border-2 border-project1 rounded-md px-5 py-2 flex flex-col gap-3',
+          !hidden ? 'text-primary' : ' text-primary-dark',
+        )}
+        style={{
+          backgroundColor: !hidden ? hsla : '#000',
+        }}
       >
         {/* Name */}
         <div>

@@ -18,7 +18,7 @@ const positionRing = {
   html: { top: 173, left: 573 },
   ts: { top: 143, left: 543 },
   graphql: { top: 113, left: 513 },
-  vuejs: { top: 83, left: 483 },
+  /*   vuejs: { top: 83, left: 483 }, */
 };
 
 const positionObject = {
@@ -60,7 +60,7 @@ const duration = {
   html: 13,
   ts: 15,
   graphql: 8,
-  vuejs: 9,
+  /*   vuejs: 9, */
 };
 
 export const skills: RingProps[] = [
@@ -83,6 +83,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.css3,
+    link: 'https://www.w3schools.com/css/',
   },
   /* NestJS */
   {
@@ -102,6 +103,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.nextjs,
+    link: 'https://nextjs.org',
   },
   /* NestJS */
   {
@@ -121,10 +123,11 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.nestjs,
+    link: 'https://nestjs.com',
   },
   /* Tailwind */
   {
-    name: 'Tailwind',
+    name: 'TailwindCSS',
     ring: {
       size: {
         width: 360,
@@ -140,6 +143,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.tailwind,
+    link: 'https://tailwindcss.com',
   },
   /* ReactJS */
   {
@@ -159,6 +163,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.reactjs,
+    link: 'https://react.dev',
   },
   /* HTML */
   {
@@ -178,6 +183,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.html,
+    link: 'https://www.w3schools.com/html/',
   },
   /* TS */
   {
@@ -197,6 +203,7 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.ts,
+    link: 'https://www.typescriptlang.org',
   },
   /* Graphql */
   {
@@ -216,9 +223,10 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.graphql,
+    link: 'https://graphql.org',
   },
   /* VueJS */
-  {
+  /*  {
     name: 'VueJS',
     ring: {
       size: {
@@ -235,5 +243,5 @@ export const skills: RingProps[] = [
       },
     },
     duration: duration.vuejs,
-  },
+  }, */
 ];

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { ElementRef, useEffect, useRef, useState } from 'react';
 import Project2 from '@/components/projects/list/Project2';
 import Project3 from '@/components/projects/list/Project3';
+import useThemeSwitcher from '@/hooks/useThemeSwitcher';
 
 type Type = 1 | 2 | 3;
 export interface DetailProps {
@@ -13,6 +14,7 @@ export interface DetailProps {
 }
 const Detail: React.FC<DetailProps> = ({ type }) => {
   const [isMounted, setMounted] = useState(false);
+
   useEffect(() => {
     setMounted(true);
   }, []);
@@ -23,19 +25,19 @@ const Detail: React.FC<DetailProps> = ({ type }) => {
     <div className="w-full flex justify-between">
       <li
         ref={liRef}
-        className="w-full flex  items-center  justify-between relative"
+        className="w-full flex  items-center  justify-between relative "
       >
         <motion.div
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}
-          className="max-w-[50%] w-fit"
+          className="max-w-[50%]"
         >
           {type === 1 && <Project1 />}
           {type === 2 && <Project2 />}
           {type === 3 && <Project3 />}
         </motion.div>
-        <div className="absolute left-1/2 top-1">
+        <div className="absolute left-1/2 top-1 ">
           {' '}
           <CircleIcon reference={liRef} />
         </div>
@@ -43,8 +45,9 @@ const Detail: React.FC<DetailProps> = ({ type }) => {
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}
+          className="w-[40%]"
         >
-          <ProjectImageInfo />
+          <ProjectImageInfo type={type} />
         </motion.div>
       </li>
     </div>
