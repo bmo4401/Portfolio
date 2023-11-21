@@ -6,14 +6,14 @@ import { Button } from '@/components/ui/Button';
 import { LinkArrow } from '@/components/ui/icon/LinkArrow';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import introImage from '@/public/images/intro.png';
 const Intro = () => {
   return (
     <div className="h-screen w-screen relative">
       <div className=" w-full h-full flex items-start mt-10 justify-center gap-10 ">
         <div className="relative w-80 aspect-square rounded-full overflow-hidden">
           <Image
-            src="/images/intro.png"
+            src={introImage}
             alt="Avatar"
             fill
             className="aspect-square"
