@@ -13,15 +13,20 @@ array[0] = 150;
 for (let i = 1; i < array.length; i++) {
   array[i] = array[i - 1] + 70;
 }
+const pos: Array<number> = Array.from({ length: 8 });
+pos[0] = 40;
+for (let i = 1; i < pos.length; i++) {
+  pos[i] = pos[i - 1] - 4.7;
+}
 const positionRing = {
-  css3: { top: '40%', left: '40%' },
-  nextjs: { top: '35%', left: '35%' },
-  nestjs: { top: '30%', left: '30%' },
-  tailwind: { top: '25%', left: '25%' },
-  reactjs: { top: '20%', left: '20%' },
-  html: { top: '15%', left: '15%' },
-  ts: { top: '10%', left: '10%' },
-  graphql: { top: '5%', left: '5%' },
+  css3: { top: `${pos[0]}%`, left: `${pos[0]}%` },
+  nextjs: { top: `${pos[1]}%`, left: `${pos[1]}%` },
+  nestjs: { top: `${pos[2]}%`, left: `${pos[2]}%` },
+  tailwind: { top: `${pos[3]}%`, left: `${pos[3]}%` },
+  reactjs: { top: `${pos[4]}%`, left: `${pos[4]}%` },
+  html: { top: `${pos[5]}%`, left: `${pos[5]}%` },
+  ts: { top: `${pos[6]}%`, left: `${pos[6]}%` },
+  graphql: { top: `${pos[7]}%`, left: `${pos[7]}%` },
   /*   vuejs: { top: '0%', left: '0%' }, */
 };
 

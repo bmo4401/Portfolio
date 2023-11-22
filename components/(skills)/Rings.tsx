@@ -10,7 +10,7 @@ const Rings = () => {
   return (
     <section className="w-full h-[900px] flex items-center justify-center ">
       <ul
-        className="rounded-full w-[750px] h-[750px] relative list-none   overflow-hidden flex items-center justify-center"
+        className="rounded-full w-[750px] h-[750px] relative list-none   overflow-hidden flex items-center justify-center bg-black"
         style={{ backgroundImage: `url(${universal_image.src})` }}
       >
         {/* Core */}

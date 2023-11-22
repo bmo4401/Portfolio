@@ -41,7 +41,8 @@ const Intro = () => {
             target="_blank"
           >
             <Button>
-              Resume <LinkArrow className="w-6 ml-1" />{' '}
+              <span className="text-primary-dark"> Resume</span>{' '}
+              <LinkArrow className="text-primary-dark w-6 ml-1" />{' '}
             </Button>
           </Link>
         </div>
