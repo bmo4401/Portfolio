@@ -11,11 +11,11 @@ const CircleIcon: React.FC<CircleIconProps> = ({ reference }) => {
   });
 
   return (
-    <figure className=" stroke-forePrimary">
+    <figure className=" stroke-forePrimary ">
       <svg
         className="-rotate-90"
-        width={75}
         height={75}
+        width={75}
         viewBox="0 0 100 100"
       >
         <circle

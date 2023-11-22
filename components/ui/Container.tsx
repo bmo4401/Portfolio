@@ -13,7 +13,7 @@ const Container = ({
       initial={{ y: 50 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 0.5, type: 'spring' }}
-      className={cn('my-32', className)}
+      className={cn('my-28', className)}
     >
       {children}
     </motion.div>

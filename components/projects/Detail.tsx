@@ -25,13 +25,13 @@ const Detail: React.FC<DetailProps> = ({ type }) => {
     <div className="w-full flex justify-between">
       <li
         ref={liRef}
-        className="w-full flex  items-center  justify-between relative "
+        className="w-full flex  items-center  justify-around   relative "
       >
         <motion.div
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}
-          className="max-w-[50%]"
+          className="w-1/3"
         >
           {type === 1 && <Project1 />}
           {type === 2 && <Project2 />}

@@ -10,7 +10,7 @@ import introImage from '@/public/images/intro.png';
 const Intro = () => {
   return (
     <div className="h-screen w-screen relative">
-      <div className=" w-full h-full flex items-start mt-10 justify-center gap-10 ">
+      <div className=" w-full h-full flex items-start mt-10 justify-around gap-10 ">
         <div className="relative w-80 aspect-square rounded-full overflow-hidden">
           <Image
             src={introImage}
@@ -49,10 +49,10 @@ const Intro = () => {
         </div>
       </div>
       {/* Position Absolute */}
-      <div className="absolute bottom-20 left-3">
+      <div className="absolute bottom-40 left-3">
         <WebDev />
       </div>
-      {/*       <ParticlesContainer /> */}
+      <ParticlesContainer />
     </div>
   );
 };
