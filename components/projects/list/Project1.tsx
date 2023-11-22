@@ -58,7 +58,7 @@ const Project1 = () => {
       {/* main */}
       <div
         className={cn(
-          '  dark:text-primary-dark w-full h-full border-2 border-project1 rounded-md px-5 py-2 flex flex-col gap-3',
+          'max-w-full  dark:text-primary-dark h-full border-2 border-project1 rounded-md px-5 py-2 flex flex-col gap-3',
           !hidden ? 'text-primary' : ' text-primary-dark',
         )}
         style={{

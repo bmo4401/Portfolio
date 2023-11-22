@@ -6,8 +6,8 @@ import Link from 'next/link';
 
 const Rings = () => {
   return (
-    <section className="w-full relative">
-      <ul className="relative h-[900px] list-none duration-[90] overflow-hidden">
+    <section className="w-full ">
+      <ul className="left-[10%] relative h-[900px] list-none   overflow-hidden">
         {/* Core */}
         <li
           className={cn(
