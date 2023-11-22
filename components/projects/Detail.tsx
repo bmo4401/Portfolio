@@ -31,7 +31,7 @@ const Detail: React.FC<DetailProps> = ({ type }) => {
           initial={{ y: 50 }}
           whileInView={{ y: 0 }}
           transition={{ duration: 0.8, type: 'spring' }}
-          className="w-1/3"
+          className="w-[40%]"
         >
           {type === 1 && <Project1 />}
           {type === 2 && <Project2 />}

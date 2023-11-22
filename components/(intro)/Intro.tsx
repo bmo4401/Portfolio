@@ -32,7 +32,7 @@ const Intro = () => {
           />
           <div className="max-w-lg -translate-y-8">
             <AnimatedText
-              text={`'Strength grows in the face of challenges.'`}
+              text={`"Strength grows in the face of challenges."`}
               className="text-2xl  text-start normal-case h-fit italic"
             />
           </div>

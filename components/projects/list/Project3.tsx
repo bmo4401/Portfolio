@@ -7,8 +7,8 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 const Project3 = () => {
   const [opacity, setOpacity] = useState(0);
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  const [x, setX] = useState('');
+  const [y, setY] = useState('');
   const [hidden, setHidden] = useState(true);
   const [lightness, setLightness] = useState('95%');
   const hsl = `hsla(142, 72%, ${lightness}, 0.5)`;
@@ -19,8 +19,14 @@ const Project3 = () => {
     if (overlayContainer === null) return;
     const applyOverlayMask = (e: PointerEvent) => {
       if (overlayContainer instanceof HTMLElement) {
-        const x = e.clientX - 80;
-        const y = e.clientY - 80;
+        const x =
+          ((e.clientX - overlayContainer.offsetLeft) * 100) /
+            overlayContainer.offsetWidth +
+          '%';
+        const y =
+          ((e.clientY - overlayContainer.offsetTop) * 100) /
+            overlayContainer.offsetHeight +
+          '%';
         setOpacity(1);
         setX(x);
         setY(y);
@@ -36,8 +42,8 @@ const Project3 = () => {
     });
     overlayContainer.addEventListener('mouseleave', (e) => {
       setHidden(false);
-      setX(-999);
-      setY(-999);
+      setX('-999%');
+      setY('-999%');
     });
     return () => {
       overlayContainer.removeEventListener('pointermove', (e) => {
@@ -139,7 +145,7 @@ const Project3 = () => {
           'transition duration-300 ease-linear absolute inset-0 pointer-events-none select-none ',
         )}
         style={{
-          WebkitMask: `radial-gradient(15rem 15rem at ${x}px ${y}px,#000 1%, transparent 50%)`,
+          WebkitMask: `radial-gradient(15rem 15rem at ${x} ${y},#000 1%, transparent 50%)`,
           opacity: opacity,
         }}
       >

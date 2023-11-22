@@ -14,17 +14,19 @@ const ProjectImageInfo: React.FC<DetailProps> = ({ type }) => {
     <div className=" w-full h-full flex items-center justify-end ">
       <div
         className={cn(
-          'relative h-64 aspect-video border-2 rounded-md overflow-hidden',
+          'relative h-60 border-2 rounded-md overflow-hidden',
           type === 1 && 'border-project1',
           type === 2 && 'border-project2',
           type === 3 && 'border-project3',
         )}
+        style={{ aspectRatio: 2.1 }}
       >
         <Image
           fill
           alt=""
           src={image[type]}
-          className="object-cover"
+          className="object-contain"
+          style={{ aspectRatio: 2.1 }}
         />
       </div>
     </div>
