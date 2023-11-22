@@ -6,62 +6,48 @@ export interface RingProps {
   ring: {
     size: { width: number };
     position: {
-      top: number;
-      left: number;
+      top: string;
+      left: string;
     };
     color?: string;
   };
   target: {
-    size: {
+    /*  size: {
       width: number;
       height: number;
-    };
+    }; */
     position: {
-      top: number;
-      left: number;
+      top: string;
+      left: string;
     };
-    color?: string;
+    /* color?: string; */
     children?: React.ReactNode;
   };
-  isCore?: boolean;
+  /*   isCore?: boolean; */
   link: string;
 }
-const Skill: React.FC<RingProps> = ({
-  duration,
-  name,
-  ring,
-  target,
-
-  isCore = false,
-}) => {
+const Skill: React.FC<RingProps> = ({ duration, name, ring, target }) => {
   return (
     <li
       id={name}
       className={cn(
-        'block absolute border-2  indent-[-9999px] rounded-full aspect-square',
-        isCore ? '' : 'animate-spin',
+        'absolute indent-[-9999px] rounded-full aspect-square',
+        'animate-spin border border-slate-500',
       )}
       style={{
         width: ring.size.width,
-        top: ring.position.top,
-        left: ring.position.left,
-        borderColor: ring.color ?? '#394057',
+        top: `${ring.position.top}`,
+        left: `${ring.position.left}`,
         animationDuration: `${duration}s`,
-        backgroundColor: isCore ? ring.color ?? '#394057' : '',
       }}
     >
       <span
         className={cn('block absolute rounded-full ')}
         style={{
-          width: target.size.width,
-          height: target.size.height,
-          top: target.position.top,
-          left: target.position.left,
-          backgroundColor: target.color ?? '',
-          display: isCore ? 'none' : '',
+          top: `${target.position.top}`,
+          left: `${target.position.left}`,
         }}
       >
-        {name}
         {target.children}
       </span>
     </li>

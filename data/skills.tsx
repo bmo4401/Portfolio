@@ -8,46 +8,61 @@ import HTML from '@/components/(skills)/items/HTML';
 import TS from '@/components/(skills)/items/TS';
 import Graphql from '@/components/(skills)/items/Graphql';
 import VueJS from '@/components/(skills)/items/VueJS';
-
+const array: Array<number> = Array.from({ length: 8 });
+array[0] = 150;
+for (let i = 1; i < array.length; i++) {
+  array[i] = array[i - 1] + 70;
+}
 const positionRing = {
-  css3: { top: 323, left: 723 },
-  nextjs: { top: 293, left: 693 },
-  nestjs: { top: 263, left: 663 },
-  tailwind: { top: 233, left: 633 },
-  reactjs: { top: 203, left: 603 },
-  html: { top: 173, left: 573 },
-  ts: { top: 143, left: 543 },
-  graphql: { top: 113, left: 513 },
-  /*   vuejs: { top: 83, left: 483 }, */
+  css3: { top: '40%', left: '40%' },
+  nextjs: { top: '35%', left: '35%' },
+  nestjs: { top: '30%', left: '30%' },
+  tailwind: { top: '25%', left: '25%' },
+  reactjs: { top: '20%', left: '20%' },
+  html: { top: '15%', left: '15%' },
+  ts: { top: '10%', left: '10%' },
+  graphql: { top: '5%', left: '5%' },
+  /*   vuejs: { top: '0%', left: '0%' }, */
+};
+
+const widthObject = {
+  css3: array[0],
+  nextjs: array[1],
+  nestjs: array[2],
+  tailwind: array[3],
+  reactjs: array[4],
+  html: array[5],
+  ts: array[6],
+  graphql: array[7],
 };
 
 const positionObject = {
-  css3: { top: 10, left: 10 },
-  nextjs: { top: 101, left: 212 },
+  css3: { top: '0%', left: '8%' },
+  nextjs: { top: '13%', left: '81%' },
   nestjs: {
-    top: 40,
-    left: 5,
+    top: '17%',
+    left: '0%',
   },
-  tailwind: { top: 60, left: 305 },
+  tailwind: { top: '68%', left: '0%' },
   reactjs: {
-    top: 70,
-    left: 5,
+    top: '26%',
+    left: '0%',
   },
   html: {
-    top: 56,
-    left: 30,
+    top: '29%',
+    left: '0%',
   },
   ts: {
-    top: -23,
-    left: 276,
+    top: '28%',
+    left: '0%',
   },
   graphql: {
-    top: 498,
-    left: 76,
+    top: '28%',
+    left: '0%',
   },
   vuejs: {
-    top: 208,
-    left: -10,
+    top: '0%',
+    left: '0%',
   },
 };
 
@@ -69,7 +84,7 @@ export const skills: RingProps[] = [
     name: 'CSS3',
     ring: {
       size: {
-        width: 180,
+        width: widthObject.css3,
       },
       position: positionRing.css3,
     },
@@ -77,10 +92,6 @@ export const skills: RingProps[] = [
       children: <CSS3 />,
 
       position: positionObject.css3,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.css3,
     link: 'https://www.w3schools.com/css/',
@@ -90,17 +101,13 @@ export const skills: RingProps[] = [
     name: 'NextJS',
     ring: {
       size: {
-        width: 240,
+        width: widthObject.nextjs,
       },
       position: positionRing.nextjs,
     },
     target: {
       children: <NextJS />,
       position: positionObject.nextjs,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.nextjs,
     link: 'https://nextjs.org',
@@ -110,17 +117,13 @@ export const skills: RingProps[] = [
     name: 'NestJS',
     ring: {
       size: {
-        width: 300,
+        width: widthObject.nestjs,
       },
       position: positionRing.nestjs,
     },
     target: {
       children: <NestJS />,
       position: positionObject.nestjs,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.nestjs,
     link: 'https://nestjs.com',
@@ -130,17 +133,13 @@ export const skills: RingProps[] = [
     name: 'TailwindCSS',
     ring: {
       size: {
-        width: 360,
+        width: widthObject.tailwind,
       },
       position: positionRing.tailwind,
     },
     target: {
       children: <Tailwind />,
       position: positionObject.tailwind,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.tailwind,
     link: 'https://tailwindcss.com',
@@ -150,17 +149,13 @@ export const skills: RingProps[] = [
     name: 'ReactJS',
     ring: {
       size: {
-        width: 420,
+        width: widthObject.reactjs,
       },
       position: positionRing.reactjs,
     },
     target: {
       children: <ReactJS />,
       position: positionObject.reactjs,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.reactjs,
     link: 'https://react.dev',
@@ -170,17 +165,13 @@ export const skills: RingProps[] = [
     name: 'HTML',
     ring: {
       size: {
-        width: 480,
+        width: widthObject.html,
       },
       position: positionRing.html,
     },
     target: {
       children: <HTML />,
       position: positionObject.html,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.html,
     link: 'https://www.w3schools.com/html/',
@@ -190,17 +181,13 @@ export const skills: RingProps[] = [
     name: 'TS',
     ring: {
       size: {
-        width: 540,
+        width: widthObject.ts,
       },
       position: positionRing.ts,
     },
     target: {
       children: <TS />,
       position: positionObject.ts,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.ts,
     link: 'https://www.typescriptlang.org',
@@ -210,17 +197,13 @@ export const skills: RingProps[] = [
     name: 'Graphql',
     ring: {
       size: {
-        width: 600,
+        width: widthObject.graphql,
       },
       position: positionRing.graphql,
     },
     target: {
       children: <Graphql />,
       position: positionObject.graphql,
-      size: {
-        height: 10,
-        width: 10,
-      },
     },
     duration: duration.graphql,
     link: 'https://graphql.org',
@@ -237,10 +220,7 @@ export const skills: RingProps[] = [
     target: {
       children: <VueJS />,
       position: positionObject.vuejs,
-      size: {
-        height: 10,
-        width: 10,
-      },
+      
     },
     duration: duration.vuejs,
   }, */

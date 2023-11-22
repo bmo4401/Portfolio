@@ -22,7 +22,7 @@ const Intro = () => {
         <div className="max-w-2xl flex flex-col gap-2 ">
           {' '}
           <AnimatedText
-            text={`Hi, I'm Hai`}
+            text={`Hi, I'm Kyle`}
             className="text-6xl  text-start"
           />
           <AnimatedText
@@ -32,10 +32,8 @@ const Intro = () => {
           />
           <div className="max-w-lg -translate-y-8">
             <AnimatedText
-              text={
-                ' I am looking for a professional environment where I can learn, develop my knowledge and skills, and willing to learn new things and take on challenges.'
-              }
-              className="text-2xl  text-start normal-case h-fit"
+              text={`'Strength grows in the face of challenges.'`}
+              className="text-2xl  text-start normal-case h-fit italic"
             />
           </div>
           <Link

@@ -3,23 +3,24 @@ import Web from '@/components/(skills)/items/Web';
 import { skills } from '@/data/skills';
 import { cn } from '@/libs/utils';
 import Link from 'next/link';
-
+import universal from '@/public/universal-removebg-preview.png';
+import CSS3 from '@/components/(skills)/items/CSS3';
+import universal_image from '@/public/universal-removebg-preview.png';
 const Rings = () => {
   return (
-    <section className="w-full ">
-      <ul className="left-[10%] relative h-[900px] list-none   overflow-hidden">
+    <section className="w-full h-[900px] flex items-center justify-center ">
+      <ul
+        className="rounded-full w-[750px] h-[750px] relative list-none   overflow-hidden flex items-center justify-center"
+        style={{ backgroundImage: `url(${universal_image.src})` }}
+      >
         {/* Core */}
         <li
           className={cn(
-            'block absolute border-2 border-[#394057] indent-[-9999px] rounded-full border-none z-50 transition-all duration-200 ease-in sun aspect-square',
-            'w-[80px] ',
-            'top-[370px] left-[770px]',
+            ' border-[#394057] indent-[-9999px] border-none z-50 transition-all duration-200 ease-in',
             'shadow-[0 0 50px #c90]',
           )}
         >
-          <span className="block absolute w-[80px] h-[80px] rounded-full ">
-            <Web />
-          </span>
+          <Web />
         </li>
 
         {skills.map((item) => (

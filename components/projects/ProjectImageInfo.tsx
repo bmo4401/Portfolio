@@ -11,7 +11,7 @@ const ProjectImageInfo: React.FC<DetailProps> = ({ type }) => {
     3: pj3_img,
   };
   return (
-    <div className=" w-full h-full flex items-center justify-center ">
+    <div className=" w-full h-full flex items-center justify-end ">
       <div
         className={cn(
           'relative h-64 aspect-video border-2 rounded-md overflow-hidden',
