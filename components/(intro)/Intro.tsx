@@ -46,11 +46,12 @@ const Intro = () => {
             </Button>
           </Link>
         </div>
+        {/* Position Absolute */}
+        <div className="absolute bottom-[15%] left-3">
+          <WebDev />
+        </div>
       </div>
-      {/* Position Absolute */}
-      <div className="absolute bottom-40 left-3">
-        <WebDev />
-      </div>
+
       <ParticlesContainer />
     </div>
   );
